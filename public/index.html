@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="" type="image/x-icon" />
+  <link rel="shortcut icon" href="./image/ico-monkey.png" type="image/x-icon">
+  <link rel="stylesheet" href="style/style.css" />
+  <title>Easy Creator</title>
+</head>
+
+<body>
+  
+  <input id="server_discord_id" type="hidden">
+  <input id="login" type="hidden">
+
+  <header class="center">
+    <div class="header-content">
+      <div class="menu">
+        <div id="server-icon-menu" class="cont-img-server center">
+          <img src="./image/logo-monkey.png" alt="">
+        </div>
+        <!-- <span>Lucy</span> -->
+        <ul>
+          <li id="server-menu" class="server-menu">Servidores</li>
+        </ul>
+      </div>
+    
+      <div id="user-data-header" class="user-data center none">
+        <div class="cont-img-user center">
+          <img id="user-img" src="" alt="user"> 
+        </div>
+        <span id="user-name"></span>
+      </div>
+    </div>
+  </header>
+    
+  <div class="container jf-content">
+
+    <div id="container-button" class="center container-button">
+      <button id="login-discord" class="blue-button button-login center">
+        <img src="./image/discord-log.png" alt="">Login Discord
+       </button>
+    </div>
+
+
+    <div id="container-serves" class="container-serves center none"></div>
+    
+   
+    <div id="container-commands" class="container-commands none">
+      
+        <div id="server-icon" class="cont-img-server center">
+          <img src="./image/discord-log.png" alt="">
+        </div>
+    
+      <div class="commands">
+        <h1>Comandos do servidor</h1>
+        <div class="card">
+          <details class="warning">
+            <summary>      
+                <label class="switch al-items">
+                <input class="input-command-checkBox" id="enable-channel" onchange="inputCommand(this)" commad-name="enable-channel" type="checkbox">
+                <span class="slider"></span>
+                <span class="command-name">Ativar canal</span>
+              </label>
+            </summary>
+            <p>Ativa o canal para interação com a Lucy</p> 
+          </details>
+  
+          <details class="warning">
+            <summary>      
+                <label class="switch al-items">
+                <input class="input-command-checkBox" id="youtube" onchange="inputCommand(this)" commad-name="youtube" type="checkbox">
+                <span class="slider"></span>
+                <span class="command-name">You Tube</span>
+              </label>
+            </summary>
+            <p>Com um link de um Vídeo do YouTube, Lucy pode fazer uma analize personalizada</p> 
+          </details>
+  
+          <details class="warning">
+            <summary>      
+                <label class="switch al-items">
+                <input class="input-command-checkBox" id="image" onchange="inputCommand(this)" commad-name="image" type="checkbox">
+                <span class="slider"></span>
+                <span class="command-name">Imagem</span>
+              </label>
+            </summary>
+            <p>Gerar uma imagem personalizada</p> 
+          </details>
+  
+          <details class="warning">
+            <summary>      
+                <label class="switch al-items">
+                <input class="input-command-checkBox" id="message_by_date" onchange="inputCommand(this)" commad-name="message_by_date" type="checkbox">
+                <span class="slider"></span>
+                <span class="command-name">Mensagens por data</span>
+              </label>
+            </summary>
+            <p>Lucy pode buscar conversas do canal a partir de uma data, assim, passando
+              uma instrução para as mensagens buscadas
+            </p> 
+          </details>
+          <details class="warning">
+            <summary>      
+                <label class="switch al-items">
+                <input class="input-command-checkBox" id="set_system" onchange="inputCommand(this)" commad-name="set_system" type="checkbox">
+                <span class="slider"></span>
+                <span class="command-name">Setar prompt</span>
+              </label>
+            </summary>
+            <p>Setar comportamento para Lucy e configurações no Discord
+            </p> 
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <!-- <div id="test-function"></div> -->
+
+  <script src="./script/jquery.js"></script>
+  <script src="./script/index.js?v=55.0"></script>
+  <script src="./script/script.js?v=51.0"></script>
+</body>
+
+</html>
+
