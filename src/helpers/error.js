@@ -1,4 +1,4 @@
-import colors from "colors/safe.js";
+import colors from "colors/safe";
 
 const error = async (error,i) => {
     
@@ -60,16 +60,16 @@ const errorApi = (res, e) => {
 
 const getRandomErrorPhrase = async () => {
     const phrases = [
-        "Desculpe-me, estou lidando com uma alta demanda de usuários neste momento. Por favor, seja paciente e tente novamente em breve. 🙂",
-        "Peço desculpas pela espera. Estou atendendo muitos usuários agora. Por favor, aguarde um momento e tente novamente. 😉",
-        "Lamentamos informar que estamos com um grande volume de usuários no momento, o que pode afetar o tempo de resposta. Por favor, tente novamente em alguns instantes. 😌",
-        "No momento, estou ocupado atendendo vários usuários simultaneamente. Solicito que aguarde um momento e tente novamente. 🥲",
-        "Estou enfrentando uma grande demanda de usuários agora. Por favor, seja paciente e tente novamente em breve. 🥺",
-        "Devido à alta demanda, estou lidando com muitos usuários no momento. Peço desculpas pelo inconveniente e sugiro que tente novamente mais tarde. 🫣",
-        "Ops! Estou com um número elevado de usuários para atender neste momento. Por favor, aguarde um instante e tente novamente. 😬",
-        "Pedimos desculpas pela demora. Estamos com uma grande demanda de usuários no momento. Solicitamos que você aguarde um momento e tente novamente. 😪",
-        "Infelizmente, estou sobrecarregado com um grande número de usuários no momento. Peço desculpas pela espera e recomendo que tente novamente mais tarde. 🙃",
-        "Devido ao alto fluxo de usuários, estou enfrentando dificuldades no momento. Por favor, seja paciente e tente novamente em breve. 🥹",
+        "Houve um pequeno imprevisto, por favor, tente novamente. 🙂",
+        "Tive um contratempo, aguarde um pouco e tente de novo. 😉",
+        "Encontrei um obstáculo, tente novamente. 😌",
+        "Estou lidando com uma situação inesperada, tente de novo. 🥲",
+        "Houve um pequeno imprevisto, por favor, tente novamente. 🥺",
+        "Tive um contratempo, tente novamente, por favor. 🫣",
+        "Encontrei um obstáculo, tente de novo.  😬",
+        "Estou lidando com uma situação inesperada, tente de novo. 😪",
+        "Houve um pequeno imprevisto, por favor, tente novamente. 🙃",
+        "Houve um imprevisto, por favor, tente novamente. 🥹"
     ];
 
     const randomIndex = Math.floor(Math.random() * (phrases.length - 1));
@@ -92,6 +92,7 @@ const errorDiscordBot = async (error,i) => {
         }
         else if(error.type == 1){
            errorSistem = true
+           e.error = await getRandomErrorPhrase()
         } 
 
     }else{
